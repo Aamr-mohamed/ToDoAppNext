@@ -18,6 +18,7 @@ export default function TaskModal() {
     await createTask({
       title: formData.title,
       description: formData.description,
+      completed: formData.completed,
     });
 
     setError(null);

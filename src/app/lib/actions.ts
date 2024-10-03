@@ -5,7 +5,7 @@ import { revalidatePath } from "next/cache";
 
 const prisma = new PrismaClient();
 
-export async function createTask(data: { title: string; description: string }) {
+export async function createTask(data: { title: string; description: string , completed: boolean }) {
   try {
     await prisma.task.create({
       data: {
