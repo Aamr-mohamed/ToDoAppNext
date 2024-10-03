@@ -17,7 +17,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
   return (
     <MantinePagination
       total={totalPages}
-      page={currentPage}
+      value={currentPage}
       onChange={onPageChange}
       size="md"
       radius="md"
