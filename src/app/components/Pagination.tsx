@@ -9,7 +9,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
   const currentPage = Number(searchParams.get("page")) || 1;
 
   const onPageChange = (newPage: number) => {
-    const query = new URLSearchParams(searchParams as any);
+    const query = new URLSearchParams(searchParams.toString());
     query.set("page", String(newPage));
     router.push(`?${query.toString()}`);
   };
