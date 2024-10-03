@@ -6,12 +6,12 @@ import { Pagination as MantinePagination } from "@mantine/core";
 export default function Pagination({ totalPages }: { totalPages: number }) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const currentPage = Number(searchParams.get("page")) || 1; // Get page from URL or default to 1
+  const currentPage = Number(searchParams.get("page")) || 1;
 
   const onPageChange = (newPage: number) => {
     const query = new URLSearchParams(searchParams as any);
-    query.set("page", String(newPage)); // Set new page in query params
-    router.push(`?${query.toString()}`); // Push the new query params
+    query.set("page", String(newPage));
+    router.push(`?${query.toString()}`);
   };
 
   return (
